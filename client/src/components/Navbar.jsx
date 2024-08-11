@@ -4,7 +4,7 @@ import FlexBetween from "./FlexBetween";
 import { Search, Menu as MenuIcon, DarkModeOutlined, LightModeOutlined, SettingsOutlined } from "@mui/icons-material";
 import { setMode } from "state";
 
-function Navbar() {
+function Navbar({isSidebarOpen, setIsSidebarOpen}) {
   const dispatch = useDispatch();
   const theme = useTheme();
   return (
@@ -18,7 +18,7 @@ function Navbar() {
       <Toolbar sx={{justifyContent: "space-between"}}>
         {/* Left Side */}
         <FlexBetween>
-          <IconButton onClick={() => console.log("open sidebar")}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon />
           </IconButton>
           <FlexBetween
