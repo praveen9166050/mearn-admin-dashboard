@@ -10,10 +10,11 @@ import managementRouter from "./routes/management.js";
 import salesRouter from "./routes/sales.js";
 
 // To insert bulk user data
-// import { dataProduct, dataProductStat, dataUser } from "./data/index.js";
+// import { dataProduct, dataProductStat, dataTransaction, dataUser } from "./data/index.js";
 // import User from "./models/User.js";
 // import Product from "./models/Product.js";
 // import ProductStat from "./models/ProductStat.js";
+// import Transaction from "./models/Transaction.js";
 
 dotenv.config();
 
@@ -49,6 +50,7 @@ mongoose.connect(process.env.MONGO_URI)
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
   });
 })
 .catch(error => console.log(error));
