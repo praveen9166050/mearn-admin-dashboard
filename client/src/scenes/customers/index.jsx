@@ -26,7 +26,7 @@ function Customers() {
       field: "phoneNumber",
       headerName: "Phone Number",
       flex: 0.5,
-      renderCall: (params) => params.value.replace(/(\d{3})(\d{3})(\d{4})/, "($1)$2-$3")
+      renderCell: (params) => params.value.replace(/(\d{3})(\d{3})(\d{4})/, "($1)$2-$3")
     },
     {
       field: "country",
