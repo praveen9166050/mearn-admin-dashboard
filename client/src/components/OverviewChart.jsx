@@ -88,6 +88,7 @@ function OverviewChart({isDashboard = false, view}) {
       }}
       yFormat=" >-.2f"
       curve="catmullRom"
+      enableArea={isDashboard}
       axisTop={null}
       axisRight={null}
       axisBottom={{
@@ -106,6 +107,7 @@ function OverviewChart({isDashboard = false, view}) {
         truncateTickAt: 0
       }}
       axisLeft={{
+        tickValues: 5,
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
@@ -124,7 +126,7 @@ function OverviewChart({isDashboard = false, view}) {
       pointLabelYOffset={-12}
       enableTouchCrosshair={true}
       useMesh={true}
-      legends={!isDashboard && [
+      legends={!isDashboard ? undefined : [
         {
           anchor: 'bottom-right',
           direction: 'column',

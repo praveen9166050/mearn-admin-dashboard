@@ -137,7 +137,7 @@ function BreakdownChart({isDashboard = false}) {
         }}
       >
         <Typography variant="h6">
-          {isDashboard && "Total:"} ${data.overallStats.yearlySalesTotal}
+          {!isDashboard && "Total:"} ${data.overallStats.yearlySalesTotal}
         </Typography>
       </Box>
     </Box>
